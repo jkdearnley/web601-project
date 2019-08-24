@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import NavBar from './components/layout/navbar'
 import Dashboard from './components/dashboard/Dashboard'
 
-
 const App = () => {
   return (
       <div className="ui container">
@@ -18,7 +17,5 @@ const App = () => {
       </div>
   )
 }
-
-
 
 export default App;
