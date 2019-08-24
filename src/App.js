@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
-import { BrowserRouter } from 'react-dom'
-import Navbar from './components/layout/navbar'
+import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom'
+import NavBar from './components/layout/navbar'
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-       <div className="App">
-          <Navbar />
-        </div>
-      </BrowserRouter>
-    );
-  }
+const App = () => {
+  return (
+      <div className="ui container">
+          <BrowserRouter>
+              <div>
+              <NavBar />
+                  
+              </div>
+          </BrowserRouter>
+      </div>
+  )
 }
+
+
 
 export default App;
