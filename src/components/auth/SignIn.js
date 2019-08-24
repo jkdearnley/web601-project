@@ -5,14 +5,14 @@ class SignIn extends Component {
         email: '',
         password: ''
     }
-    handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(this.state);
-    }
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         })
+    }
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.state);
     }
     render() {
         return (

@@ -5,7 +5,7 @@ import Dashboard from './components/dashboard/Dashboard'
 import DiscussionDetails from './components/discussions/DiscussionDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
-
+import CreateDiscussion from './components/discussions/CreateDiscussion'
 
 const App = () => {
   return (
@@ -18,6 +18,8 @@ const App = () => {
                   <Route exact path='/discussion/:id' component={DiscussionDetails} />
                   <Route exact path='/signin' component={SignIn} />
                   <Route exact path='/signup' component={SignUp} />
+                  <Route exact path='/create' component={CreateDiscussion} />
+                  <Route exact path='/details' component={DiscussionDetails} />
                 </Switch> 
               </div>
           </BrowserRouter>

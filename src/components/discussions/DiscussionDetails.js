@@ -3,7 +3,7 @@ import React from 'react'
 const DiscussionDetails = (props) => {
     const id = props.match.params.id;
     return (
-        <div className="container section discussion-details">
+        <div className="container section discussion-details">           
             <div className="card z-depth-0">
                 <div className="card-content">
                     <span className="card-title">Discussion Title - {id}</span>
@@ -13,8 +13,8 @@ const DiscussionDetails = (props) => {
                     <div>Posted by Jayden Dearnley</div>
                     <div>24th August, 4:20PM</div>
                 </div>
-            </div>
-        </div>
+            </div>          
+        </div>       
     )
 }
 
