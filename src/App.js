@@ -6,6 +6,8 @@ import DiscussionDetails from './components/discussions/DiscussionDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateDiscussion from './components/discussions/CreateDiscussion'
+//import body from './index.css'
+import './index.css'
 
 const App = () => {
   return (
