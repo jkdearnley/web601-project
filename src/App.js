@@ -6,7 +6,8 @@ import DiscussionDetails from './components/discussions/DiscussionDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateDiscussion from './components/discussions/CreateDiscussion'
-//import body from './index.css'
+import About from './components/About';
+import ContactUs from './components/contact/ContactUs'
 import './index.css'
 
 const App = () => {
@@ -22,6 +23,8 @@ const App = () => {
                   <Route exact path='/signup' component={SignUp} />
                   <Route exact path='/create' component={CreateDiscussion} />
                   <Route exact path='/details' component={DiscussionDetails} />
+                  <Route exact path='/about' component={About} />
+                  <Route exact path='/contact' component={ContactUs} />
                 </Switch> 
               </div>
           </BrowserRouter>
