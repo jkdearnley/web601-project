@@ -8,6 +8,8 @@ const DiscussionList = () => {
             <DiscussionSummary />
             <DiscussionSummary />
             <DiscussionSummary />
+            <DiscussionSummary />
+            <DiscussionSummary />
         </div>
     )
 }
