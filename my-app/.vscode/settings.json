@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "gamersvibe",
+            "dialect": "MySQL",
+            "name": "WebProject",
+            "password": "Jay123qwe!@#",
+            "port": 3306,
+            "server": "localhost",
+            "username": "root"
+        }
+    ]
+}
