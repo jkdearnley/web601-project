@@ -10,7 +10,7 @@ function listAllDiscussionsKnex(req, res) {
     } = req.app.locals
     knex
         .select('*')
-        .from('discussions')
+        .from('discussions').join('user', 'user.UserID', 'discussions.UserID')
         /*We going to use a promise based lib */
         .then(data => res.status(200).json(data))
         .catch(error => res.status(500).json(error))

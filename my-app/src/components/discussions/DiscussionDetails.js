@@ -6,6 +6,7 @@ const DiscussionDetails = (props) => {
     const content= props.location.discussionContent
     const title= props.location.discussionTitle
     const date= props.location.discussionDate
+    const name= props.location.discussionName
     console.log(props.location.discussionProps)
     return (
         <div className="container section discussion-details">           
@@ -15,7 +16,7 @@ const DiscussionDetails = (props) => {
                     <p>{content}</p>
                 </div>
                 <div className="card-action grey lighten-4 grey-text">
-                    <div>Posted by Jayden Dearnley</div>
+                    <div>{name}</div>
                     <div>{date}</div>
                 </div>
             </div>          

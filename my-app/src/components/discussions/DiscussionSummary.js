@@ -8,10 +8,12 @@ const DiscussionSummary = ({discussion}) => {
                 <span className="card-title">{discussion.title}</span>
                 <ul className="right">
                     <li><Link to={{
-                        pathname:'/details', discussionContent:discussion.content, discussionTitle:discussion.title, discussionDate:discussion.dateposted
+                        pathname:'/details', discussionContent:discussion.content, discussionTitle:discussion.title, 
+                        discussionDate:discussion.dateposted,
+                        discussionName:discussion.FirstName + ' ' + discussion.LastName
                     }} className='btn blue darken-1'>View Discussion</Link></li>
                 </ul>
-                <p>Posted by Jayden</p>
+                <p>{discussion.FirstName + ' ' + discussion.LastName}</p>
                 <p className="grey-text">{discussion.dateposted}</p>
             </div>
         </div>
