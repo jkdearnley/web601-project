@@ -1,5 +1,6 @@
 /* In the file we are going to use knex with employee controller */
 
+const moment = require('moment')
 
 function listAllDiscussionsKnex(req, res) {
     /*We are going to use the latest Object destructuring of JS and this means 
@@ -49,7 +50,10 @@ function postDiscussions(req, res) {
     a response for that. 
     */
     // console.log(req.body)
-    const payload = req.body
+    let payload = req.body
+    payload.dateposted= moment().format('YYYY-MM-DD HH:mm:ss');
+
+
     /* When you do a POST method you also send a payload with your POST req, express access the payload.
        We need to parse payload because Express does not see payload as part of the req body */
     const mandatoryColumns = ['title', 'content']
