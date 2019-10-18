@@ -42,28 +42,28 @@ function listSingleDiscussions(req, res) {
 }
 
 function postDiscussions(req, res) {
-    // const {
-    //     knex
-    // } = req.app.locals
-    // /* Now we are going to work with employees table and we can insert and then if we call
-    // a response for that. 
-    // */
-    // // console.log(req.body)
-    // const payload = req.body
-    // /* When you do a POST method you also send a payload with your POST req, express access the payload.
-    //    We need to parse payload because Express does not see payload as part of the req body */
-    // const mandatoryColumns = ['Name', 'Salary']
-    // const payloadKeys = Object.keys(payload)
-    // const mandatoryColumnsExists = mandatoryColumns.every(mc => payloadKeys.includes(mc))
-    // if (mandatoryColumnsExists) {
-    //     knex('employees')
-    //         .insert(payload)
-    //         .then(response => res.status(201).json('Employee record created'))
-    //         .catch(error => res.status(500).json(error))
+    const {
+        knex
+    } = req.app.locals
+    /* Now we are going to work with employees table and we can insert and then if we call
+    a response for that. 
+    */
+    // console.log(req.body)
+    const payload = req.body
+    /* When you do a POST method you also send a payload with your POST req, express access the payload.
+       We need to parse payload because Express does not see payload as part of the req body */
+    const mandatoryColumns = ['Title', 'Content']
+    const payloadKeys = Object.keys(payload)
+    const mandatoryColumnsExists = mandatoryColumns.every(mc => payloadKeys.includes(mc))
+    if (mandatoryColumnsExists) {
+        knex('discussions')
+            .insert(payload)
+            .then(response => res.status(201).json('Discussion record created'))
+            .catch(error => res.status(500).json(error))
 
-    // } else {
-    //     return res.status(400).json(`Mandatory Columns are required ${mandatoryColumns}`);
-    // }
+    } else {
+        return res.status(400).json(`Mandatory Columns are required ${mandatoryColumns}`);
+    }
 }
 
 function updateDiscussions(req, res) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const DiscussionSummary = ({discussion}) => {
     return (
@@ -7,7 +7,9 @@ const DiscussionSummary = ({discussion}) => {
             <div className="card-content grey-text text-darken-3">
                 <span className="card-title">{discussion.title}</span>
                 <ul className="right">
-                    <li><NavLink to='/details' className='btn blue darken-1'>View Discussion</NavLink></li>
+                    <li><Link to={{
+                        pathname:'/details', discussionContent:discussion.content, discussionTitle:discussion.title, discussionDate:discussion.dateposted
+                    }} className='btn blue darken-1'>View Discussion</Link></li>
                 </ul>
                 <p>Posted by Jayden</p>
                 <p className="grey-text">{discussion.dateposted}</p>
