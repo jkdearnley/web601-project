@@ -12,6 +12,15 @@ class CreateDiscussion extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
+        fetch('http://localhost:4200/api/discussions', {
+            method: 'post',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({
+             "title": this.title.value,
+             "content": this.content.value,
+             "UserID": 1
+            })});
+        console.log("Discussion added");
         console.log(this.state);
     }
     render() {
@@ -21,14 +30,14 @@ class CreateDiscussion extends Component {
                     <h5 className="grey-text text-darken-3">Start a Discussion</h5>
                     <div className="input-field">
                         <label htmlFor="title">Title</label>
-                        <input type="text" id="title" onChange={this.handleChange}/>
+                        <input ref={(ref) => {this.title = ref}} type="text" id="title" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
                         <label htmlFor="content">Content</label>
-                        <textarea id="content"className="materialize-textarea" onChange={this.handleChange}></textarea>
+                        <textarea ref={(ref) => {this.content = ref}} id="content"className="materialize-textarea" onChange={this.handleChange}></textarea>
                     </div>
                     <div className="input-field">
-                        <button className="btn blue darken-1 z-depth-0">Post</button>
+                        <button className="btn blue darken-1 z-depth-0" type="submit">Post</button>
                     </div>
 
                 </form>

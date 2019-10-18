@@ -52,7 +52,7 @@ function postDiscussions(req, res) {
     const payload = req.body
     /* When you do a POST method you also send a payload with your POST req, express access the payload.
        We need to parse payload because Express does not see payload as part of the req body */
-    const mandatoryColumns = ['Title', 'Content']
+    const mandatoryColumns = ['title', 'content']
     const payloadKeys = Object.keys(payload)
     const mandatoryColumnsExists = mandatoryColumns.every(mc => payloadKeys.includes(mc))
     if (mandatoryColumnsExists) {
@@ -74,14 +74,14 @@ function updateDiscussions(req, res) {
     //     id
     // } = req.params
     // const payload = req.body
-    // knex('employees')
+    // knex('discussions')
     //     .where('id', id)
     //     .update(payload)
     //     .then(response => {
     //         if (response) {
     //             res.status(204).json()
     //         } else {
-    //             return res.status(404).json(`Employee with id ${id} not found.`);
+    //             return res.status(404).json(`DIscussion with id ${id} not found.`);
     //         }
     //     })
     //     .catch(error => res.status(500).json(error))
