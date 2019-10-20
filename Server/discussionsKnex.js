@@ -46,9 +46,6 @@ function postDiscussions(req, res) {
     const {
         knex
     } = req.app.locals
-    /* Now we are going to work with employees table and we can insert and then if we call
-    a response for that. 
-    */
     // console.log(req.body)
     let payload = req.body
     payload.dateposted= moment().format('YYYY-MM-DD HH:mm:ss');

@@ -1,16 +1,11 @@
-/* We going to build REST API without using any dependencies, 
-    and we are going to add some endpoints as well as applying
-    some basic principles.
- */
 
-// We are going to use two node modules http and url, also we going to use the dummy data.
 const http = require('http')
 const url = require('url')
 
 const data = require('./data')
 
 function employeesList(req, res) {
-    // The handler we be used or called when we call the HTTP method of GET  /api/employees
+    // The handler we be used or called when we call the HTTP method of GET  /api/discussions
     // two things we are going to do :
     res.statusCode = 200;
     res.end(JSON.stringify(data));
@@ -111,7 +106,6 @@ const server = http.createServer((req, res) => {
     // We are going to access the url, so we are going to create an endpoint for /api/employees
     //the req object only contain the url as a property but also has a req method property
     const urlDepartment = url.parse(req.url)
-    // console.log(urlEmployees)
     // if our var is equal to the api then we are certain that someone is making an api call 
     if (urlDepartment.pathname === '/api/department') {
         switch (req.method) {

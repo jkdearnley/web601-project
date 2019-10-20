@@ -47,13 +47,6 @@ router.patch('/discussions/:id', jsonParser, middlewares.checkID, routes.discuss
 /* Now we are going to use DELETE to remove an employee from the table */
 router.delete('/discussions/:id', middlewares.checkID, routes.discussionsList.deleteDiscussions)
 
-
-// router.get('/department', routes.departmentList.listAllDepartments);
-// router.get('/department/:id', middlewares.checkID, routes.departmentList.listSingleDepartment);
-// router.post('/department', jsonParser, routes.departmentList.postDepartment);
-// router.patch('/department/:id', jsonParser, middlewares.checkID, routes.departmentList.updateDepartment)
-// router.delete('/department/:id', middlewares.checkID, routes.departmentList.deleteDepartment)
-
 app.use('/api', router);
 
 
