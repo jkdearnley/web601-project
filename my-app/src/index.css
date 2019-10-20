@@ -5,11 +5,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url(/img/image1.jpg) no-repeat; 
-  background-size: cover;
-  background-position: center;
-  background-color: darkgrey;
-  min-height: 10%;
+  background: url(/img/bg.png) ; 
+  background-size: center;
+  background-position: left;
+  background-color: darkcyan;
+  min-height: 100%;
 }
 form {
   padding: 20px;
