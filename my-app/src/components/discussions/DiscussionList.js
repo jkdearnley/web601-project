@@ -1,29 +1,7 @@
-// import React from 'react'
-
-
-// const DiscussionList = () => {
-//     return (
-//         <div className="discussion-list section">
-//             <DiscussionSummary />
-//             <DiscussionSummary />
-//             <DiscussionSummary />
-//             <DiscussionSummary />
-//             <DiscussionSummary />
-//             <DiscussionSummary />
-//         </div>
-//     )
-// }
-
-// export default DiscussionList
-
-
-
-  
-import React from 'react'
+ import React from 'react'
 import { Link } from 'react-router-dom'
 import DiscussionSummary from './DiscussionSummary'
 
-//const myBooks = [];
 export default class DiscussionList extends React.Component {
    
     constructor(props) {
@@ -35,7 +13,7 @@ export default class DiscussionList extends React.Component {
 	}
 
 
-    // Retrieves all the books from the database and saves them in the array books
+    // Retrieves all the discussions from the database and saves them in the array discussions
     GetDiscussions() {
         fetch('http://localhost:4200/api/discussions')
 		.then(res => res.json())
@@ -59,11 +37,11 @@ export default class DiscussionList extends React.Component {
         })	
     }
 
-    // When the component has mounted, the books will be retrieved
+    // When the component has mounted, the discussions will be retrieved
     componentDidMount() {
         this.GetDiscussions();
-        //this.timer = setInterval(() => this.GetUserBooks(), 10000);
-        //setTimeout(function() {console.log(this.state.books)}, 8000)
+        this.timer = setInterval(() => this.GetDiscussions(), 100);
+        //setTimeout(function() {console.log(this.state.discussions)}, 8000)
 	}
 
 
