@@ -57,7 +57,9 @@ export default function Navbar() {
         unmountOnExit
       >
         <nav className="Nav">
+        <Link to='/' className="brand-logo">GamersV!be</Link>
             <div>
+     
             <SignedInLinks />
             </div>
             
@@ -72,14 +74,14 @@ export default function Navbar() {
 
 //     return (
 //         <nav className="nav-wrapper grey darken-3">
-//             <div className="container">
-//                 <Link to='/' className="brand-logo">GamersV!be</Link>
-//                 <SignedInLinks />
-//                 <SignedOutLinks />
-//             </div>
-//         </nav>
+// //             <div className="container">
+// //                 <Link to='/' className="brand-logo">GamersV!be</Link>
+// //                 <SignedInLinks />
+// //                 <SignedOutLinks />
+// //             </div>
+// //         </nav>
 //     )
-// }
+
 
 
 
